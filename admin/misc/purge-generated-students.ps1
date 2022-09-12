@@ -7,13 +7,15 @@ param (
 	[switch] $allStudents
 )
 
-. $PSScriptRoot\load-config.ps1 
+. "$PSScriptRoot\..\shared-types.ps1"
+
+EnsureConfigLoaded
 
 # this script already filters down to general student workspaces
 $spaces = .$PSScriptRoot\get-workshop-spaces.ps1 
 if (!$allStudents) {
 	# further limit to just the ones with the generated student name
-	$spaces = $spaces | Where-Object { $_.Name -like "Student*" }
+	$spaces = $spaces | Where-Object { $_.Name -like "Z-Student*" }
 }
 #$spaces | ConvertTo-Json
 Write-Host "Generated student spaces to purge: $($spaces.Count)"
@@ -27,7 +29,7 @@ if (!$skipUserDelete) {
 	$users = $users | Where-Object { $_.DisplayName -like "*Student - *" }
 
 	if (!$allStudents) {
-		$users = $users | Where-Object { $_.DisplayName -like "* - Student*" }
+		$users = $users | Where-Object { $_.DisplayName -like "*Z-Student*" }
 	}
 #	$users | ConvertTo-Json
 	
