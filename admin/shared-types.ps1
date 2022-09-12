@@ -94,3 +94,11 @@ function GetStudentInfo(){
 	$studentInfo = Get-Content $studentFilename | ConvertFrom-Json
 	return $studentInfo
 }
+
+function GetCmdBaseDir(){
+	if ((Get-Location).Path.Contains("admin")) {
+		return "."
+	} else {
+		return "..\repo\admin"
+	}
+}

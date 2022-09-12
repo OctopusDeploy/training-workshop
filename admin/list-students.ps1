@@ -11,10 +11,7 @@ param (
 . "$PSScriptRoot\shared-config.ps1"
 . "$PSScriptRoot\shared-types.ps1"
 
-$cmdBaseDir = "..\repo\admin";
-if ((Get-Location).Path.Contains("admin")) {
-	$cmdBaseDir = "."
-}
+$cmdBaseDir = GetCmdBaseDir
 
 EnableHighlight
 if (!$Local) {
