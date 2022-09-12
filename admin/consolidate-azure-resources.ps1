@@ -1,3 +1,7 @@
+<#
+	Script to consolidate a single student's Azure web app resources after they've been through the 
+	workshop but still want to play with deployment. This helps with cost reduction.
+#>
 [CmdletBinding()]
 param (
 	[Parameter()]
