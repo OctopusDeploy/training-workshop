@@ -8,6 +8,8 @@ param (
 . "$PSScriptRoot\shared-types.ps1"
 . "$PSScriptRoot\shared-config.ps1"
 
+EnsureConfigLoaded
+
 $jsonFile = "$PSScriptRoot\data\$studentSlug.json"
 
 Write-Host "Checking for student info file $jsonFile..."

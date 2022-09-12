@@ -73,8 +73,15 @@ function UseOctoClient(){
 }
 
 function EnsureConfigLoaded(){
-	if (!$configLoaded) {
-		. $PSScriptRoot\testing\load-config.ps1
+	if ( !$script:configLoaded) {
+		Write-Host "Loading local configuration"
+		$configFile = "$PSScriptRoot\config.local.ps1"
+		if(Test-Path -Path $configFile){
+			. $configFile
+		} else {
+			Write-Error "Expected config file not found: $configFile"
+		}
+		$script:configLoaded = $true
 	}
 }
 

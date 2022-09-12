@@ -47,7 +47,7 @@ foreach ($file in $studentFiles) {
 	if (!$studentInfo.AzureApps[0].ResourceId -or $studentInfo.AzureApps[0].ResourceId.Length -eq 0) {
 		$switches = "-skipAzure -forceCleanup "
 	}
-	Write-Host "$cmdBaseDir\testing\deprovision-student.ps1 -studentSlug $slug $switches| $cmdBaseDir\testing\update-existing-git-branch.ps1 -studentSlug $slug | ($($file.Length))"
+	Write-Host "($($file.Length)) | $cmdBaseDir\deprovision-student.ps1 -studentSlug $slug $switches| $cmdBaseDir\update-existing-git-branch.ps1 -studentSlug $slug"
 
 	$studentItem = $studentItems | Where-Object -Property Name -EQ $file.Name
 	if (!$studentItem) {

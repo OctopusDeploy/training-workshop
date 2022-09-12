@@ -1,6 +1,9 @@
-$baseScriptDir = $PSScriptRoot
+<#
+Gets the raw student space info from the configured Octopus Cloud instance.
+#>
+. "$PSScriptRoot\shared-types.ps1"
 
-. $baseScriptDir\load-config.ps1
+EnsureConfigLoaded
 
 $odHeaders = @{ "X-Octopus-ApiKey" = $octopusKey }
 

@@ -1,6 +1,10 @@
-$baseScriptDir = $PSScriptRoot 
+<#
+Gets the raw user info from the configured Octopus Cloud instance.
+#>
 
-. $baseScriptDir\load-config.ps1 
+. "$PSScriptRoot\shared-types.ps1"
+
+EnsureConfigLoaded
 
 $odHeaders = @{ "X-Octopus-ApiKey" = $octopusKey } 
 

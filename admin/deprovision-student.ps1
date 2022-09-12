@@ -15,6 +15,8 @@ param (
 . "$PSScriptRoot\shared-types.ps1"
 . "$PSScriptRoot\shared-config.ps1"
 
+EnsureConfigLoaded
+
 $studentInfoFile = "$dataFolder\$studentSlug.json"
 $studentInfo = [StudentInfo]::New()
 

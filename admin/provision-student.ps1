@@ -7,7 +7,7 @@ param (
 	[string] $githubUrl,
 	[string] $githubSecurity,
 
-	[string] $octopusUrl,
+	[string] $octopusURL,
 	[string] $octopusKey,
 
 	[string] $azTenantId,
@@ -28,7 +28,6 @@ param (
 	[switch] $skipGit,
 	[switch] $skipOctopus,
 	[switch] $skipAzure,
-	[switch] $skipUser,
 	[switch] $skipEmail,
 	[switch] $skipBlob,
 
@@ -40,6 +39,7 @@ $ErrorActionPreference = 'Stop'
 . "$PSScriptRoot\shared-octo-utils.ps1"
 . "$PSScriptRoot\shared-types.ps1"
 . "$PSScriptRoot\shared-config.ps1"
+EnsureConfigLoaded
 
 if (!$skipGit) {
 	if (!(EnsureInGitWorkspace)) {
@@ -57,7 +57,7 @@ if (-not $skipOctopus) {
 
 	$studentInfo = . "$PSScriptRoot\provision-student-octopus.ps1" `
 		-studentInfo $studentInfo `
-		-octopusUrl $octopusUrl -octopusKey $octopusKey `
+		-octopusUrl $octopusURL -octopusKey $octopusKey `
 		-azSubscriptionId $azSubscriptionId -azTenantId $azTenantId `
 		-azUser $azUser -azSecret $azSecret `
 		-slackUrl $slackUrl `
