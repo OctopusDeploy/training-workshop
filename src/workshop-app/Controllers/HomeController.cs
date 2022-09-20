@@ -58,7 +58,7 @@ namespace workshop_app.Controllers
 						model.ProceedMessage = "Woohoo, you're getting close!<br />Please proceed to your production environment web site.";
 						break;
 					case "production":
-						model.ProceedMessage = "Woohoo, you made it!<br /><br />Enter your Slack username below and click the button to post your success.";
+						model.ProceedMessage = "Woohoo, you made it!<br /><br />Click the button to post your success.";
 						model.ShowSlackButton = true;
 						model.PostUrl = Url.Action("PostToSlack", "Home", new { slackUser = "(slackUser)" });
 						break;
@@ -70,7 +70,7 @@ namespace workshop_app.Controllers
 
 		public async Task<IActionResult> PostToSlack(string slackUser)
 		{
-			var response = await _httpClient.PostAsJsonAsync(_config["Space:Workshop:SlackUrl"], new { text = $":tada: :tada: <@{slackUser}> successfully completed the Octopus 101 training workshop. :tada: :tada:" });
+			var response = await _httpClient.PostAsJsonAsync(_config["Space:Workshop:SlackUrl"], new { text = $":tada: :tada: {_config["Project:Workshop:StudentName"]}> successfully completed the Octopus 101 training workshop. :tada: :tada:" });
 			return Content(response.StatusCode.ToString());
 		}
 
