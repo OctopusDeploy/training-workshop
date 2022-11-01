@@ -47,7 +47,7 @@ function UpdateLocalStudentData(){
 	Write-Host "Getting student list from Azure storage."
 	$storageContext = (Get-AzStorageAccount -ResourceGroupName $azResourceGroupName -Name $azStorageAccount).Context
 	$blobItems = Get-AzStorageBlob -Container $azStorageStudentContainer -Context $storageContext
-	Write-Host "Blob items found: $($blobItems.Length)"
+	#Write-Host "Blob items found: $($blobItems.Length)"
 
 	foreach ($item in $blobItems) {
 		$filePath = "$dataFolder\$($item.Name)"
