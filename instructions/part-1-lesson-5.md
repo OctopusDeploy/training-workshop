@@ -23,7 +23,7 @@
 
 ## Configure `Test` and `Production` environments
 
-- Navigate to the `Infrastructure` > `Environments` area. (or go [directly there](https://octopus-training.octopus.app/app#/[space-id]/infrastructure/environments))
+- Navigate to the `Infrastructure` > `Environments` area. (or go [directly there](https://octopus-training.octopus.app/app#/Spaces-405/infrastructure/environments))
 
 ![](assets/1-4/infra-environments.png)
 
@@ -40,10 +40,10 @@ Use these variations in place of those in the Lesson 2 instructions:
 |-|-|-|-|
 | Display Name | `Azure Test Service` | `Azure Prod Service` | |
 | Environments | `Test` | `Production` | |
-| Azure Web App | `[student-slug]-test` | `[student-slug]-prod` | |
+| Azure Web App | `Z-Student-96ee26db-test` | `Z-Student-96ee26db-prod` | |
 
 Verify your configuration:
-- Navigate to `Infrastructure` > `Overview` ([go directly there](https://octopus-training.octopus.app/app#/[space-id]/infrastructure/overview))
+- Navigate to `Infrastructure` > `Overview` ([go directly there](https://octopus-training.octopus.app/app#/Spaces-405/infrastructure/overview))
 - Verify that you now have the following updates:
   - `Environments (3)`
     - `Development 1`
@@ -58,13 +58,13 @@ Verify your configuration:
 
 - Navigate to the workshop application project overview
   - Click `Projects` then `Workshop Application` or 
-  - [Go directly there](https://octopus-training.octopus.app/app#/[space-id]/projects/workshop-application/deployments)
+  - [Go directly there](https://octopus-training.octopus.app/app#/Spaces-405/projects/workshop-application/deployments)
 - Notice that you now have the `Test` and `Production` environments
 - Notice there's a `Deploy...` button under `Test`, but not under `Production` for the release
 
 ## Verify `Test` website is running and empty
 
-- Browse to your `Test` environment web site: [student-app-url-test]
+- Browse to your `Test` environment web site: https://z-student-96ee26db-test.azurewebsites.net
 - Verify that it is running the Azure default web site
 
 ## Deploy to `Test`
@@ -77,25 +77,25 @@ On the next screen (`Deploy release`)
 - Click the `Deploy` button
 
 Once the deployment to `Test` is complete
-- Navigate to your `Test` web site: [student-app-url-test]
+- Navigate to your `Test` web site: https://z-student-96ee26db-test.azurewebsites.net
 - Verify it is now the workshop sample application
 
 ## Verify `Production` website is running and empty
 
-- Browse to your `Production` environment web site: [student-app-url-prod]
+- Browse to your `Production` environment web site: https://z-student-96ee26db-prod.azurewebsites.net
 - Verify that it is still running the Azure default web site
 
 ## Deploy to `Production`
 
 In the Octopus portal
-- Return to the [`Projects` > `Workshop Application` overview page](https://octopus-training.octopus.app/app#/[space-id]/projects/workshop-application/deployments)
+- Return to the [`Projects` > `Workshop Application` overview page](https://octopus-training.octopus.app/app#/Spaces-405/projects/workshop-application/deployments)
 - Notice we now have a `Deploy...` button under `Production`
 - Click the `Deploy...` button
 - Observe the `Azure Prod Service` target under the `Preview and customize` section
 - Click `Deploy` to complete the `Production` environment deployment
 
 Verify the deployment:
-- Browse to or refresh your `Production` environment web site: [student-app-url-prod]
+- Browse to or refresh your `Production` environment web site: https://z-student-96ee26db-prod.azurewebsites.net
 - Verify that it is now running the workshop sample application
 
 **Congratulations! You've completed your first deployment through to Production!**

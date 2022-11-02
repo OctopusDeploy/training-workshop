@@ -23,7 +23,7 @@
 
 ## Add package deployment
 
-From [your project overview](https://octopus-training.octopus.app/app#/[space-id]/projects/workshop-application/deployments).
+From [your project overview](https://octopus-training.octopus.app/app#/Spaces-405/projects/workshop-application/deployments).
 - Click on `Process` under the `Deployments` menu
 - Click `Add Step` button
 - Click on the `Azure` box
@@ -47,7 +47,7 @@ From [your project overview](https://octopus-training.octopus.app/app#/[space-id
 - Click the `Task Log` tab to see the details
 
 Once the deployment has completed running
-- Navigate to or refresh your `Development` web site: [student-app-url-dev]
+- Navigate to or refresh your `Development` web site: https://z-student-96ee26db-dev.azurewebsites.net
 - Verify that the workshop sample application is running on the web site. It should look similar to this:
 
 ![](assets/1-3/dev-app-first-run.png)
@@ -56,7 +56,7 @@ Once the deployment has completed running
 
 - Navigate to the project overview
   - Click `Projects` then `Workshop Application` or
-  - Go directly there: https://octopus-training.octopus.app/app#/[space-id]/projects/workshop-application/deployments
+  - Go directly there: https://octopus-training.octopus.app/app#/Spaces-405/projects/workshop-application/deployments
 - Observe the project dashboard showing the release deployed to `Development`
 
 # Lesson Completed!

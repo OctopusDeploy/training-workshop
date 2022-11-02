@@ -1,4 +1,4 @@
-# Welcome [student-name] to the Octopus basics workshop!
+# Welcome Z-Student 947d281f572a to the Octopus basics workshop!
 
 This training workshop is designed to build a fundamental understanding of Octopus Deploy, its place in the CI/CD ecosystem, and the value it provides to a typical deployment pipeline workflow.
 
@@ -32,7 +32,7 @@ If you are viewing this as a student on your branch, these instructions have bee
 
 The setup for your experience in this workshop has created a number of resources for your use. Most of these are identified uniquely for you using an ID "slug". This is a text identifier made up of parts of your name and a unique generated ID (to avoid any possible collisions between student names).
 
-Your slug is: `[student-slug]`
+Your slug is: `Z-Student-96ee26db`
 
 This value will show up in some lessons when you need to select resources from a list.
 
@@ -42,13 +42,13 @@ A new branch has been created for you in the GitHub workshop repository. You won
 
 Chances are, you're already viewing these instructions on your branch but for your reference, here is its URL:
 
-https://github.com/OctopusDeploy/training-workshop/tree/student/[student-slug]
+https://github.com/OctopusDeploy/training-workshop/tree/student/Z-Student-96ee26db
 
 ## Octopus Space
 
 A new Space inside the Octopus Deploy workshop training Cloud instance has been created for you. This is where you'll spend most of your time performing the tasks that make up the workshop lessons.
 
-https://octopus-training.octopus.app/app#/[space-id]
+https://octopus-training.octopus.app/app#/Spaces-405
 
 You can get into this by logging in with your Microsoft account.
 - Use the `Sign in with Microsoft` button.
@@ -62,9 +62,9 @@ Finally, several web site services hosted in Azure have been set up to serve as 
 
 Hosting services have been created to represent the typical environments a software development team would deploy to. Here are the unique URLs for your instances of these services for each of the environments:
 
-- `Development`: [student-app-url-dev]
-- `Test`: [student-app-url-test]
-- `Production`: [student-app-url-prod]
+- `Development`: https://z-student-96ee26db-dev.azurewebsites.net
+- `Test`: https://z-student-96ee26db-test.azurewebsites.net
+- `Production`: https://z-student-96ee26db-prod.azurewebsites.net
 
 You'll find links to these applications throughout the workshop when you need to visit them again to see the results of the actions you've performed.
 

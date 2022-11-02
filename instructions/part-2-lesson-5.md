@@ -23,12 +23,12 @@
 ## Verify Library Variable Set exists
 - Navigate to your Space's Library area: 
   - Click `Library` tab or 
-  - [Go there directly](https://octopus-training.octopus.app/app#/[space-id]/library/builtinrepository)
+  - [Go there directly](https://octopus-training.octopus.app/app#/Spaces-405/library/builtinrepository)
 - Click `Variable Sets`
 - Verify a set exists called `Slack Variables`
 
 ## Link a Library Variable Set to your project
-From [your project overview](https://octopus-training.octopus.app/app#/[space-id]/projects/workshop-application/deployments)
+From [your project overview](https://octopus-training.octopus.app/app#/Spaces-405/projects/workshop-application/deployments)
 - Click `Variables`, then `Library Sets`
 - Click `Include Library Variable Sets` button
 - Tick off `Slack Variables`, and click `Save`
@@ -43,9 +43,9 @@ Using what you've already learned
 
 ## Complete tasks on your websites
 - Browse to your web sites and follow any instructions on them:
-  - `Development`: [student-app-url-dev]
-  - `Test`: [student-app-url-test]
-  - `Production`: [student-app-url-prod]
+  - `Development`: https://z-student-96ee26db-dev.azurewebsites.net
+  - `Test`: https://z-student-96ee26db-test.azurewebsites.net
+  - `Production`: https://z-student-96ee26db-prod.azurewebsites.net
 
 # Lesson Completed!
 Time for some more [practice demos](part-2-student-demos.md)!

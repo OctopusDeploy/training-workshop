@@ -20,7 +20,7 @@
 
 ## Add a scoped Project variable
 
-From [your project overview](https://octopus-training.octopus.app/app#/[space-id]/projects/workshop-application/deployments)
+From [your project overview](https://octopus-training.octopus.app/app#/Spaces-405/projects/workshop-application/deployments)
 - Click on `Variables`
 - Under the `Name` column, in the `Enter new variable` field, enter the following:
 ```
@@ -53,8 +53,8 @@ Using what you've already learned
 ## Verify changes to web sites
 
 - Browse to your web sites:
-  - `Development`: [student-app-url-dev]
-  - `Test`: [student-app-url-test]
+  - `Development`: https://z-student-96ee26db-dev.azurewebsites.net
+  - `Test`: https://z-student-96ee26db-test.azurewebsites.net
 - Observe that your web sites now display the appropriate environment names
 
 # Lesson Completed!

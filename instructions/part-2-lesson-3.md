@@ -20,7 +20,7 @@
 
 ## Modify the process to use the variable
 
-From [your project overview](https://octopus-training.octopus.app/app#/[space-id]/projects/workshop-application/deployments)
+From [your project overview](https://octopus-training.octopus.app/app#/Spaces-405/projects/workshop-application/deployments)
 - Click on `Process` under `Deployments`
 - Click on the `Deploy an Azure App Service` step
 - Locate the `Configuration files` > `Structured Configuration Variables` section, click to expand it
@@ -37,7 +37,7 @@ Using what you've already learned
 - Scroll to the bottom and look for `Structured variable replacement succeeded...` This serves as confirmation that the configuration file was found and modified
 
 ## Verify change to web site
-- Browse to your `Development` web site: [student-app-url-dev]
+- Browse to your `Development` web site: https://z-student-96ee26db-dev.azurewebsites.net
 - Observe that your web site now displays your name
 
 # Lesson Completed!
